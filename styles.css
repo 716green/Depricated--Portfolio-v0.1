@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: Raleway;
+    color: darkslategray;
+    /*font-size: 20px;*/
+}
+
+html, body {
+   margin: 0;
+   padding: 0;
+}
+
+nav.ul {
+    margin: 0;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: .5em;
+    color: white;
+    text-decoration: none;
+    border-radius: 5% 5% 5% 5%;
+    font-weight: bold;
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.main-nav li {
+    padding: 0 5%
+}
+
+.nav a:hover {
+    background-color: #777;
+}
+
+.main-header {
+    background-color: rgba(0, 0, 0, .6);
+    background-image: url("Images/BG-Images/bg-tech-blue.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+
+.bob-name {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: 'Share Tech Mono', monospace;
+    padding-top: 0.25em;
+    font-weight: normal;
+    font-style: none;
+    color: white;
+}
+
+.bob-name-large {
+    font-size: 6em;
+}
+
+.content-section {
+    margin: 1em;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.container p {
+    margin: 1em;
+    font-size: 18px;
+    font-weight: medium;
+}
+
+.section-header {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bolder;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em
+}
+
+.about-bob-image {
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 15px 15px 5px 5px;
+    border-radius: 50%;
+    filter: grayscale(75%);
+}
+
+.main-footer {
+    background-color: #56CCF2;
+    color: white;
+    padding: .25em 0;
+}
+
+.main-footer-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-nav li {
+    padding: 0 .5em;
+}
+
+.footer-nav img {
+    filter: opacity(50%);
+    filter: saturate(5%);
+    width: 30px;
+    height: 30px;
+}
+
+.main-footer a:hover {
+    background-color: rgba(105, 90, 205, 0.5);
+    border-radius: 2% 25%;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em;
+    cursor: pointer;
+}
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #2D9CDB;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: rgba(255, 255, 255, .3)
+}
+
+.btn-round {
+    display: block;
+    margin: 0 auto;
+    color: #2D9CDB;
+    font-size: 4em;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.logo {
+    align-content: center;
+    filter: saturate(50%);
+}
