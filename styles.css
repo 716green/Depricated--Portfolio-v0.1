@@ -4,9 +4,8 @@
 
 * {
     box-sizing: border-box;
-    font-family: Raleway;
+    font-family: 'Share Tech Mono', monospace;
     color: darkslategray;
-    /*font-size: 20px;*/
 }
 
 html, body {
@@ -172,4 +171,146 @@ nav.ul {
 .logo {
     align-content: center;
     filter: saturate(50%);
+}
+
+.line-row {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.line-row:last-child {
+    border-bottom: none;
+}
+
+.line-item {
+    display: inline-block;
+    padding-right: .5em;
+    width: 100%;
+}
+
+.line-btn {
+    color: rgb(16, 78, 114);
+    margin: 0;
+    font-size: 1em;
+    font-weight: bold;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(118, 173, 255, 0.144);
+    border-style: 1em;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    box-shadow: 0;
+    outline-width: 0px;
+    padding: 0px;
+    border-style: hidden;
+}
+
+.line-btn:hover {
+    background-color: rgba(118, 173, 255, 0.281);
+    border-radius: 50%;
+}
+
+.line-btn:focus {
+    color: rgba(54, 30, 82, 0.548);
+}
+
+.service-item {
+    margin: 30px;
+}
+
+.service-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    padding: 30px;
+}
+
+.service-item-image {
+    height: 250px;
+    width: 250px;
+}
+
+.service-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.service-item-price {
+    flex-grow: 1;
+    color: #333;
+}
+
+.service-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.btn-service {
+    font-weight: bolder;
+    margin: 0px;
+    border: 0px;
+    width: 125px;
+    background-color: rgba(118, 173, 255, 0.281);
+}
+
+.btn-service:hover {
+    margin: 0px;
+    border: 0px;
+    background-color: rgba(118, 173, 255, 0.63);
+    border-color:rgba(118, 173, 255, 0.50);
+}
+
+.btn-service:focus {
+    border: 0px;
+    margin: 0px;
+    background-color: rgba(118, 173, 255, 0.75);
+    border-color: black;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-column {
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-item {
+    widows: 45%;
+    width: 60%
+}
+
+.cart-price
+{
+    width: 20%;
+}
+
+.cart-quantity {
+    width: 35%;
+
+}
+
+.checkout {
+    margin: 0px;
+    box-sizing: border-box;
+    align-items: center;
+    align-content: center;
+    padding-top: 30;
 }
