@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--
+    How To Setup Payments With Node.js And Stripe
+    https://youtu.be/mI_-1tbIXQI
+-->
 
 <head>
     <title>Services | Bob Bass</title>
     <meta name="services" contents="Services Page | Developer profile landing page for Bob Bass">
     <link rel="stylesheet" href="styles.css" />
+    <script src="store.js" async></script>
 </head>
 
 <body>
+    <!-- HEADER -->
     <header class="main-header">
         <nav class="nav main-nav">
             <ul>
@@ -18,143 +24,90 @@
         </nav>
         <h1 class="bob-name bob-name-large">Bob Bass</h1>
     </header>
-
+    <!-- SERVICES -->
     <section class="container content-section">
-
         <h2 class="section-header">STARTUP</h2>
         <div class="service-items">
-            <div class="service-item">
+            <div class="service-item shop-item">
                 <span class="service-item-title">Server Hosting Plan</span>
                 <img class="service-item-image" src="Images/Services/Server.svg" height="96px" width="96px">
                 <div class="service-item-details">
                     <span class="service-item-price">$49.99/mo</span>
-                    <button class="btn btn-service" type="button">ADD TO CART</button>
+                    <button class="btn btn-service shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
-            <div class="service-item">
-                <div>
-                    <span class="service-item-title">Initial Database Setup</span>
-                </div>
+            <div class="service-item shop-item">
+                <span class="service-item-title">Initial Database Setup</span>
+
                 <img class="service-item-image" src="Images/Services/Database.svg" height="96px" width="96px">
                 <div class="service-item-details">
                     <span class="service-item-price">$249.99</span>
-                    <button class="btn btn-service" type="button">ADD TO CART</button>
+                    <button class="btn btn-service shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
         </div>
         <h2 class="section-header">RESOURCES</h2>
         <div class="service-items">
-            <div class="service-item">
-                <span class="service-item-title">DebtPortfol.io Login</span>
-                <img class="service-item-image" src="Images/Services/Portfolio.svg" height="96px" width="96px">
+            <div class="service-item shop-item">
+                <span class="service-item-title">Debt Portfol.io Login</span>
+                <img class="service-item-image" src="Images/Services/Portfolio.png" height="96px" width="96px">
                 <div class="service-item-details">
                     <span class="service-item-price">$3.99</span>
-                    <button class="btn btn-service" type="button">ADD TO CART</button>
+                    <button class="btn btn-service shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
-            <div class="service-item">
+            <div class="service-item shop-item">
                 <span class="service-item-title">Custom Reporting</span>
                 <img class="service-item-image" src="Images/Services/Reporting.svg" height="96px" width="96px">
                 <div class="service-item-details">
                     <span class="service-item-price">$34.99/script</span>
-                    <button class="btn btn-service" type="button">ADD TO CART</button>
+                    <button class="btn btn-service shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
         </div>
         <h2 class="section-header">CONSULTING</h2>
         <div class="service-items">
-            <div class="service-item">
+            <div class="service-item shop-item">
                 <span class="service-item-title">DB Maintainance</span>
-                <img class="service-item-image" src="Images/Services/Database-Maintainance.svg" height="96px"
+                <img class="service-item-image" src="Images/Services/Database-Maintainance.png" height="96px"
                     width="96px">
-
                 <div class="service-item-details">
                     <span class="service-item-price">$99.99/hr</span>
-                    <button class="btn btn-service" type="button">ADD TO CART</button>
+                    <button class="btn btn-service shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
-            <div class="service-item">
-                <span class="service-item-title">Consulting - 1 hr/mo</span>
+            <div class="service-item shop-item">
+                <span class="service-item-title">Consulting - 1 hr</span>
                 <img class="service-item-image" src="Images/Services/Clock.svg" height="96px" width="96px">
                 <div class="service-item-details">
                     <span class="service-item-price">$99.99/mo</span>
-                    <button class="btn btn-service" type="button">ADD TO CART</button>
+                    <button class="btn btn-service shop-item-button" type="button">ADD TO CART</button>
                 </div>
             </div>
-
+        </div>
     </section>
+    <!-- CART -->
     <section class="container content-section">
         <h2 class="section-header">CART</h2>
-        <div class="cart-row">
-            <span class="cart-item cart-header cart-column">ITEM</span>
-            <span class="cart-item cart-header cart-column">PRICE</span>
-            <span class="cart-item cart-header cart-column">QUANTITY</span>
-        </div>
-
-        <div class="cart-row">
-            <div class="cart-item cart-column">
-                <img src="Images/Services/Server.svg" height="48px" width="48px">
-                <span>Server Hosting Plan</span>
-                <span cart-price cart-column>$49.99/mo</span>
-                <div class="cart-quantity cart-header">
-                <input type="number" value="1">
-                <button class="btn btn-service" type="button">REMOVE</button>
-                </div>
-            </div>
-            <div class="cart-item cart-column">
-                <img src="Images/Services/Database.svg" height="48px" width="48px">
-                <span>Database Setup</span>
-                <span cart-price cart-column>$249.99/mo</span>
-                <div class="cart-quantity cart-header">
-                <input type="number" value="1">
-                <button class="btn btn-service" type="button">REMOVE</button>
-            </div>
-            </div>
-            <div class="cart-item cart-column">
-                <img src="Images/Services/Portfolio.svg" height="48px" width="48px">
-                <span>DebtPortfol.io Login</span>
-                <span cart-price cart-column>$3.99/mo</span>
-                <div class="cart-quantity cart-header">
-                <input type="number" value="1">
-                <button class="btn btn-service" type="button">REMOVE</button>
-            </div>
-            </div>
-            <div class="cart-item cart-column">
-                <img src="Images/Services/Reporting.svg" height="48px" width="48px">
-                <span>Custom Reporting</span>
-                <span cart-price cart-column>$34.99/mo</span>
-                <div class="cart-quantity cart-header">
-                <input type="number" value="1">
-                <button class="btn btn-service" type="button">REMOVE</button>
-            </div>
-            </div>
-            <div class="cart-item cart-column">
-                <img src="Images/Services/Database-Maintainance.svg" height="48px" width="48px">
-                <span>DB Maintainance</span>
-                <span cart-price cart-column>$99.99/mo</span>
-                <div class="cart-quantity cart-header">
-                <input type="number" value="1">
-                <button class="btn btn-service" type="button">REMOVE</button>
-            </div>
-            </div>
-            <div class="cart-item cart-column">
-                <img src="Images/Services/Clock.svg" height="48px" width="48px">
-                <span>Consulting</span>
-                <span cart-price cart-column>$99.99/mo</span>
-                <div class="cart-quantity cart-header">
-                <input type="number" value="1">
-                <button class="btn btn-service" type="button">REMOVE</button>
-            </div>
-            </div>
-
-            <div class="checkout">
-                <div class="service-item-title">Total:
-                    <div class="total-price">$399.99</div>
-                    <button class="btn btn-service" type="button">PURCHASE</button></div>
+        <div class="cart-items-header">
+            <div class="service-item-details">
+                <span class="cart-item cart-column-header cart-header">ITEM</span>
+                <span class="cart-price cart-column-header cart-header">PRICE</span>
+                <span class="cart-quantity cart-column-header cart-header">QUANTITY</span>
             </div>
         </div>
+        </div>
+        <div>
+        <div class="cart-items">
+            <!-- Where Cart Items are added -->
+            </div>
+            <div class="cart-total">
+            
+            <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0.00</span>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
     </section>
-
+    <!-- FOOTER -->
     <footer class="main-footer">
         <div class="container main-footer-container">
             <h3 class="bob-name">Bob Bass</h3>
