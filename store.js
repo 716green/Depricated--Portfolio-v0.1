@@ -6,7 +6,6 @@ if (document.readyState == 'loading') {
 }
 
 // // CREATING EVENT LISTNERS
-
 // On page load, iniit a function to remove items from the cart
 function ready() {
     var removeCartItemButtons = document.getElementsByClassName('btn-danger')
